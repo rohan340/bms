@@ -133,6 +133,7 @@
             <div class="row" style="padding: 11px 0px 0px 19px;">
                 <?php if(isset($_GET['filter_ps'])){
                             if(mysqli_num_rows($ps_result) == 0){
+                                
                                 echo "<p class='text-danger'>No Search Found</p>";
                         }
                 }?>
