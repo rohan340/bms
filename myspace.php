@@ -80,8 +80,10 @@
                     </div>
             </div>
             <div class="row" style="padding: 11px 0px 0px 19px;">
-                <?php if(mysqli_num_rows($search_result) == 0){
-                        echo "<p class='text-danger'>No Record Found</p>";
+                <?php if(isset($_GET['filter_value'])){
+                            if(mysqli_num_rows($search_result) == 0){
+                                echo "<p class='text-danger'>No Search Found</p>";
+                        }
                 }?>
             </div>
         </form>

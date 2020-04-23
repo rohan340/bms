@@ -43,8 +43,10 @@
                     </div>
             </div>
             <div class="row" style="padding: 11px 0px 0px 19px;">
-                <?php if(mysqli_num_rows($users_result) == 0){
-                        echo "<p class='text-danger'>No Record Found</p>";
+                <?php if(isset($_GET['filter_users'])){
+                            if(mysqli_num_rows($users_result) == 0){
+                                echo "<p class='text-danger'>No Search Found</p>";
+                        }
                 }?>
             </div>
         </form>
@@ -82,8 +84,10 @@
                     </div>
             </div>
             <div class="row" style="padding: 11px 0px 0px 19px;">
-                <?php if(mysqli_num_rows($bs_result) == 0){
-                        echo "<p class='text-danger'>No Record Found</p>";
+                <?php if(isset($_GET['filter_bs'])){
+                            if(mysqli_num_rows($bs_result) == 0){
+                                echo "<p class='text-danger'>No Search Found</p>";
+                        }
                 }?>
             </div>
         </form>
@@ -127,8 +131,10 @@
                     </div>
             </div>
             <div class="row" style="padding: 11px 0px 0px 19px;">
-                <?php if(mysqli_num_rows($ps_result) == 0){
-                        echo "<p class='text-danger'>No Record Found</p>";
+                <?php if(isset($_GET['filter_ps'])){
+                            if(mysqli_num_rows($ps_result) == 0){
+                                echo "<p class='text-danger'>No Search Found</p>";
+                        }
                 }?>
             </div>
         </form>
